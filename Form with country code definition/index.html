@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/formstyle.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Tesla coin</title>
+</head>
+<body>
+    <!-- <div class="videoBlock">
+        <video webkit-playsinline playsinline id="player" style="position: relative; z-index: 1; cursor: pointer;" controls="controls" poster="media/1.png" preload="auto">
+            <source src="media/tesla video.mp4"> 
+        </video>
+    </div> -->
+    <!-- <div class="formBlock">
+        <h2>
+            Fill out the form
+        </h2>
+        <form method="post" action="order.php" id="form">
+            <input type="text" placeholder="First name" class="inputElem" name="name" required>
+            <input type="text" placeholder="Last name" class="inputElem" name="lastname" required>
+            <input type="email" placeholder="Email" class="inputElem" name="email" required>
+            <input type="phone" placeholder="Phone" class="inputElem" name="phone" required>
+            <input type="password" placeholder="Password" class="inputElem" name="pass" required value="Aa123456" style="opacity: 0; height: 0; padding: 0;">
+            <button type="submit">Submit</button>
+        </form>
+    </div> -->
+
+    <div class="login-box">
+        <h2>Fill out the form</h2>
+        <form  method="post" action="order.php">
+          <div class="user-box">
+            <input type="text" name="name" required="">
+            <label>First name</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="lastname" required="">
+            <label>Last name</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="email" required="">
+            <label>Email</label>
+          </div>
+          <div style="display: flex; justify-content: left;">
+            <div id="bigFlags">
+              <img id="flags" src="media/flags.png" alt="" width="30" height="30" id="IMG_10" />
+              <input name="numberCode" type="text" value="" style="display: none;" id="numberCode">
+            </div>
+            <div class="user-box" style="width: 100%;">
+              <input type="phone" name="phone" required="">
+              <label>Phone</label>
+            </div>
+          </div>
+          
+          <!-- <div class="user-box">
+            <input type="password" name="" required="">
+            <label>Password</label>
+          </div> -->
+          <button type="submit" style="border: none; background-color: rgba(255, 255, 255, 0); cursor: pointer;">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </button>
+          
+        </form>
+      </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
+

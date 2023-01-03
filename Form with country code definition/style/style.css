@@ -1,0 +1,86 @@
+.videoBlock {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+.videoBlock video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .videoBlock {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .videoBlock {
+        padding: 10px;
+    }
+}
+
+#bigFlags {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #flags {
+    width: 20px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-color: #dbdbdb;
+    background-image: url(../media/flags2.jpg);
+    background-position: -70px -230px;
+    background-origin: border-box
+    ;
+    box-shadow: 0 0 1px 0 #888;
+    box-sizing: border-box;
+} */
+
+/* .formBlock {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+} */
+/* form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+/* h2 {
+    font-family: sans-serif;
+    text-align: center;
+} */
+
+/* .inputElem {
+    margin: 0 0 10px 0;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+    background-color: white;
+} */
+/* button {
+    background-color: rgb(106, 106, 234);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+} */
+
+
