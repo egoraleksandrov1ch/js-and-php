@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    font-family: sans-serif;
 }
 
 /* header */
@@ -13,40 +14,67 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 99;
     width: 100%;
     height: 50px;
-    background-color: black;
+    background: linear-gradient(to bottom, rgba(92, 92, 92, 0.796), rgba(0, 0, 0, 0))
 }
 .miniHeadAndFoot {
     width: 70%;
     height: 100%;
     margin: 0 auto;
-    background-color: white;
+}
+nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 30px;
 }
 
 /* main */
 #main {
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-image: url(../media/classic.jpeg);
+    background-size: cover;
+
 }
+#main:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+    z-index: 2;
+  }
 .miniMain {
+    position: relative;
     width: 70%;
-    height: 100%;
     margin: 0 auto;
     padding-top: 100px;
-    background-color: grey;
+    height: 80%;
 }
 h1 {
-    margin: 0;
+    position: relative;
+    z-index: 3;
+    margin: 0 0 50px 0;
     text-align: center;
-    font-family: sans-serif;
     font-weight: 600;
     font-size: 50px;
+    color: white;
 }
 
-button {
-    font-family: sans-serif;
+#btnOpenForm {
     font-size: 20px;
     font-weight: 300;
     background-color: #4040ff;
@@ -56,6 +84,13 @@ button {
     border: none;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    z-index: 3;
+    left: calc(50% - 100px)
 }
 
 /* footer */
@@ -63,7 +98,91 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 99;
     width: 100%;
     height: 50px;
-    background-color: black;
+    background: linear-gradient(to top, rgba(92, 92, 92, 0.796), rgba(0, 0, 0, 0))
+}
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+/* block form and form */
+#formBlock {
+    display: none;
+    width: 400px;
+    height: 500px;
+    background-color: rgba(128, 128, 128, 0.95);
+    border-radius: 20px;
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 200px);
+    z-index: 100;
+    box-shadow: 0 0 10px 10px gray;
+}
+#closeFormBlock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+#closeFormBlock img {
+    width: 20px;
+    height: 20px;
+}
+#formBlock h2 {
+    display: block;
+    width: 70%;
+    margin: 40px auto 0 auto;
+    text-align: center;
+}
+form {
+    margin-top: 20px;
+}
+.oneInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+.oneInput label {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 300;
+
+}
+input {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: grey;
+    margin: 0 0 20px 0;
+    background: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+button {
+    font-size: 20px;
+    font-weight: 300;
+    background-color: #4040ff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
 }
