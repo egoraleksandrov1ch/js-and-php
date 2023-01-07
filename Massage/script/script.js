@@ -20,15 +20,31 @@ let multiLanguage = {
     }
 }
 
+let openBlock = false;
+
+document.getElementById("btnOpenForm").onclick = function() {
+    if (openBlock == false) {
+        document.getElementById("formBlock").style.display = "block";
+        openBlock = true;
+    }
+}
+document.getElementById("closeFormBlock").onclick = function() {
+    if (openBlock == true) {
+        document.getElementById("formBlock").style.display = "none";
+        openBlock = false;
+    }
+}
 
 window.onwheel = function(event) {
     if (event.wheelDelta >= 0) {
         console.log('Scroll up');
-        window.onwheel = null
+        window.onwheel = null;
+        
     }
     else {
         console.log('Scroll down');
-        window.onwheel = null
+        window.onwheel = null;
+        
     }
 }
 
