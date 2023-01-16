@@ -38,6 +38,30 @@ nav a {
     font-weight: 600;
     padding: 10px 30px;
 }
+.langBigBlock {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.langMediumBlock {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.langSmallBlock {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+#arrowLang {
+    width: 20px;
+    cursor: pointer;
+}
 
 /* main */
 #main {

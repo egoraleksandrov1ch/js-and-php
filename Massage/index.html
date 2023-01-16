@@ -12,15 +12,23 @@
     <header>
         <div class="miniHeadAndFoot">
             <nav>
-                <a href="#">Home</a>
-                <a href="faq/index.html">FAQ</a>
-                <a href="contact/index.html">Contact</a>
+                <a class="navBar" href="#">Home</a>
+                <a class="navBar" href="faq/index.html">FAQ</a>
+                <a class="navBar" href="contact/index.html">Contact</a>
             </nav>
+        </div>
+        <div class="langBigBlock">
+            <div class="langMediumBlock">
+                <img class="langSmallBlock" src="media/ru.png" alt="RU">
+                <img class="langSmallBlock" src="media/en.png" alt="EN">
+                <img class="langSmallBlock" src="media/pl.png" alt="PL">
+            </div>
+            <img id="arrowLang" src="media/arrow-down.png" alt="arrow">
         </div>
     </header>
     <div id="main">
         <div class="miniMain">
-            <h1>
+            <h1 id="titleText">
                 Classical body massage
             </h1>
             <div class="descriptionOfTheMassage">
@@ -50,7 +58,7 @@
     </footer>
     <div id="formBlock">
         <span id="closeFormBlock"><img src="media/close.png" alt="closeImg"></span>
-        <h2>
+        <h2 id="titleForm">
             Fill out the form and you will be contacted
         </h2>
         <form>
@@ -66,7 +74,7 @@
                 <input type="tel" name="phone" placeholder="Phone" required>
                 <label>Phone</label>
             </div>
-            <button>Submit</button>
+            <button id="btnForm" type="submit">Submit</button>
         </form>
     </div>
     <script src="script/script.js"></script>
