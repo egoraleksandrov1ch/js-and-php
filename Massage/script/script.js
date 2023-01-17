@@ -52,11 +52,14 @@ const navBar = document.getElementsByClassName("navBar");
 const langIcon = document.getElementsByClassName("langSmallBlock");
 const btnOpenForm = document.getElementById("btnOpenForm");
 const titleForm = document.getElementById("titleForm");
-const btnForm = document.getElementById("btnForm");
+const btnForm = document.getElementById("button-blue");
+const nameForm = document.getElementById("name");
+const emailForm = document.getElementById("email");
+const phoneForm = document.getElementById("phone");
 
 const arrowLang = document.getElementById("arrowLang");
 let arrowLangVar = true;
-console.log(userLangNew);
+console.log(btnForm);
 
 // Start setup site
 window.onload = () => {
@@ -84,6 +87,9 @@ function setupRuFunc() {
     langIcon[2].style.display = "none";
     btnOpenForm.innerText = multiLanguage.RU.button;
     titleForm.innerText = multiLanguage.RU.form.title;
+    nameForm.placeholder = multiLanguage.RU.form.labelText[0];
+    emailForm.placeholder = multiLanguage.RU.form.labelText[1];
+    phoneForm.placeholder = multiLanguage.RU.form.labelText[2];
     btnForm.innerText = multiLanguage.RU.form.labelText[3];
 }
 function setupEnFunc() {
@@ -95,6 +101,9 @@ function setupEnFunc() {
     langIcon[2].style.display = "none";
     btnOpenForm.innerText = multiLanguage.EN.button;
     titleForm.innerText = multiLanguage.EN.form.title;
+    nameForm.placeholder = multiLanguage.EN.form.labelText[0];
+    emailForm.placeholder = multiLanguage.EN.form.labelText[1];
+    phoneForm.placeholder = multiLanguage.EN.form.labelText[2];
     btnForm.innerText = multiLanguage.EN.form.labelText[3];
 }
 function setupPlFunc() {
@@ -106,6 +115,9 @@ function setupPlFunc() {
     langIcon[1].style.display = "none";
     btnOpenForm.innerText = multiLanguage.PL.button;
     titleForm.innerText = multiLanguage.PL.form.title;
+    nameForm.placeholder = multiLanguage.PL.form.labelText[0];
+    emailForm.placeholder = multiLanguage.PL.form.labelText[1];
+    phoneForm.placeholder = multiLanguage.PL.form.labelText[2];
     btnForm.innerText = multiLanguage.PL.form.labelText[3];
 }
 
@@ -114,12 +126,16 @@ document.getElementById("btnOpenForm").onclick = function() {
     if (openBlock == false) {
         document.getElementById("formBlock").style.display = "block";
         openBlock = true;
+        document.getElementById("btnOpenForm").disable = true;
+        document.getElementById("shadowMain").style.boxShadow = "0 0 0 9999px rgba(0,0,0, 0.3)";
     }
 }
 document.getElementById("closeFormBlock").onclick = function() {
     if (openBlock == true) {
         document.getElementById("formBlock").style.display = "none";
         openBlock = false;
+        document.getElementById("btnOpenForm").disable = false;
+        document.getElementById("shadowMain").style.boxShadow = "none";
     }
 }
 
@@ -146,14 +162,42 @@ function updateTime() {
 function updateWindowSite(scrollingDirection) {
     if (scrollingDirection) {
         console.log(scrollingDirection);
-        numberWindow ++;
-        titleText.innerText = multiLanguage.RU.main.title[numberWindow];
-        imgBackground.style.backgroundImage = `url(${multiLanguage.RU.main.fon[numberWindow]})`;
+        if (numberWindow < 4) {
+            numberWindow ++;
+        }
+        switch (userLangNew) {
+            case "RU":
+                titleText.innerText = multiLanguage.RU.main.title[numberWindow];
+                imgBackground.style.backgroundImage = `url(${multiLanguage.RU.main.fon[numberWindow]})`;
+                break;
+            case "EN":
+                titleText.innerText = multiLanguage.EN.main.title[numberWindow];
+                imgBackground.style.backgroundImage = `url(${multiLanguage.EN.main.fon[numberWindow]})`;
+                break;
+            case "PL":
+                titleText.innerText = multiLanguage.PL.main.title[numberWindow];
+                imgBackground.style.backgroundImage = `url(${multiLanguage.PL.main.fon[numberWindow]})`;
+                break;
+        }
     } else {
         console.log(scrollingDirection);
-        numberWindow --;
-        titleText.innerText = multiLanguage.RU.main.title[numberWindow];
-        imgBackground.style.backgroundImage = `url(${multiLanguage.RU.main.fon[numberWindow]})`;
+        if (numberWindow > 0) {
+            numberWindow --;
+        }
+        switch (userLangNew) {
+            case "RU":
+                titleText.innerText = multiLanguage.RU.main.title[numberWindow];
+                imgBackground.style.backgroundImage = `url(${multiLanguage.RU.main.fon[numberWindow]})`;
+                break;
+            case "EN":
+                titleText.innerText = multiLanguage.EN.main.title[numberWindow];
+                imgBackground.style.backgroundImage = `url(${multiLanguage.EN.main.fon[numberWindow]})`;
+                break;
+            case "PL":
+                titleText.innerText = multiLanguage.PL.main.title[numberWindow];
+                imgBackground.style.backgroundImage = `url(${multiLanguage.PL.main.fon[numberWindow]})`;
+                break;
+        }
     }
 }
 
