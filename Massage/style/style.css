@@ -24,6 +24,9 @@ header {
     height: 100%;
     margin: 0 auto;
 }
+#burgerButton {
+    display: none;
+}
 nav {
     display: flex;
     width: 100%;
@@ -127,11 +130,18 @@ h1 {
     bottom: 20px;
     z-index: 3;
     left: calc(50% - 150px);
-    border: #fbfbfb solid 4px;;
+    border: #fbfbfb solid 4px;
 }
 #btnOpenForm:hover {
     color: #0493bd;
     background-color: white;
+}
+
+#mobileMainBlock {
+    display: none;
+}
+#btnOpenFormSecond {
+    display: none;
 }
 
 /* footer */
@@ -209,16 +219,16 @@ footer p {
 	left: 50%;
 	position: absolute;
     z-index: 99;
-  margin-top:30px;
+    margin-top:30px;
 	margin-left: -260px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
 }
 
 .feedback-input {
 	color:#3c3c3c;
 	font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
+    font-weight:500;
 	font-size: 18px;
 	border-radius: 0;
 	line-height: 22px;
@@ -230,8 +240,8 @@ footer p {
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-  border: 3px solid rgba(0,0,0,0);
-  border-radius: 10px;
+    border: 3px solid rgba(0,0,0,0);
+    border-radius: 10px;
 }
 
 .feedback-input:focus{
@@ -240,7 +250,7 @@ footer p {
 	border: 3px solid #3498db;
 	color: #3498db;
 	outline: none;
-  padding: 13px 13px 13px 54px;
+    padding: 13px 13px 13px 54px;
 }
 
 .focused{
@@ -260,7 +270,7 @@ footer p {
 	/* background-image: url(http://rexkirby.com/kirbyandson/images/name.svg); */
 	background-size: 30px 30px;
 	background-position: 8px 5px;
-  background-position: 11px 8px;
+    background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
@@ -274,7 +284,7 @@ footer p {
 #email:focus{
 	/* background-image: url(http://rexkirby.com/kirbyandson/images/email.svg); */
 	background-size: 30px 30px;
-  background-position: 11px 8px;
+    background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
 
@@ -323,8 +333,8 @@ input:focus, textarea:focus {
 }
 
 .submit:hover .ease{
-  width:100%;
-  background-color:white;
+    width:100%;
+    background-color:white;
 }
 
 @media only screen and (max-width: 580px) {

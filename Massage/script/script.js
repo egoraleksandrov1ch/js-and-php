@@ -1,3 +1,4 @@
+// text translations
 let multiLanguage = {
     RU: {
         header: ["На главную", "Частые вопросы", "Контакты"],
@@ -88,9 +89,11 @@ let multiLanguage = {
     }
 }
 
+// language detection
 let userLang = navigator.language || navigator.userLanguage; 
 let userLangNew = userLang.split('-')[0].toUpperCase();
 
+// computer version elements
 let openBlock = false;
 let upDown = true;
 let numberWindow = 0;
@@ -106,9 +109,21 @@ const nameForm = document.getElementById("name");
 const emailForm = document.getElementById("email");
 const phoneForm = document.getElementById("phone");
 
+// language selection elements
 const arrowLang = document.getElementById("arrowLang");
 let arrowLangVar = true;
-console.log(btnForm);
+
+// mobile version elements
+const mobileMainBlock = document.getElementById("mobileMainBlock");
+const titleMobileBlocks = document.getElementsByClassName("titleMobileBlock");
+const titleMobileTexts = document.getElementsByClassName("titleMobileText");
+const descriptionMobileTexts = document.getElementsByClassName("descriptionMobileText");
+const btnOpenFormSecond = document.getElementById("btnOpenFormSecond");
+let openBurger = true;
+const burgerButton = document.getElementById("burgerButton");
+const navBarMobile = document.getElementById("navBarMobile");
+
+// console.log(btnForm);
 
 // Start setup site
 window.onload = () => {
@@ -126,6 +141,9 @@ function startSetupSite() {
             setupPlFunc();
             break;
     }
+    for (let i = 0; i < titleMobileBlocks.length; i++) {
+        titleMobileBlocks[i].style.backgroundImage = `url(${multiLanguage.RU.main.fon[i]})`;
+    }
 }
 function setupRuFunc() {
     for (let i = 0; i < navBar.length; i ++) {
@@ -141,6 +159,12 @@ function setupRuFunc() {
     emailForm.placeholder = multiLanguage.RU.form.labelText[1];
     phoneForm.placeholder = multiLanguage.RU.form.labelText[2];
     btnForm.innerText = multiLanguage.RU.form.labelText[3];
+
+    for (let i = 0; i < titleMobileTexts.length; i++) {
+        titleMobileTexts[i].innerText = multiLanguage.RU.main.title[i];
+        descriptionMobileTexts[i].innerHTML = multiLanguage.RU.main.description[i];
+        btnOpenFormSecond.innerText = multiLanguage.RU.button;
+    }
 }
 function setupEnFunc() {
     for (let i = 0; i < navBar.length; i ++) {
@@ -156,6 +180,12 @@ function setupEnFunc() {
     emailForm.placeholder = multiLanguage.EN.form.labelText[1];
     phoneForm.placeholder = multiLanguage.EN.form.labelText[2];
     btnForm.innerText = multiLanguage.EN.form.labelText[3];
+
+    for (let i = 0; i < titleMobileTexts.length; i++) {
+        titleMobileTexts[i].innerText = multiLanguage.EN.main.title[i];
+        descriptionMobileTexts[i].innerHTML = multiLanguage.EN.main.description[i];
+        btnOpenFormSecond.innerText = multiLanguage.EN.button;
+    }
 }
 function setupPlFunc() {
     for (let i = 0; i < navBar.length; i ++) {
@@ -171,6 +201,12 @@ function setupPlFunc() {
     emailForm.placeholder = multiLanguage.PL.form.labelText[1];
     phoneForm.placeholder = multiLanguage.PL.form.labelText[2];
     btnForm.innerText = multiLanguage.PL.form.labelText[3];
+
+    for (let i = 0; i < titleMobileTexts.length; i++) {
+        titleMobileTexts[i].innerText = multiLanguage.PL.main.title[i];
+        descriptionMobileTexts[i].innerHTML = multiLanguage.PL.main.description[i];
+        btnOpenFormSecond.innerText = multiLanguage.PL.button;
+    }
 }
 
 // open and close form block
@@ -187,7 +223,16 @@ document.getElementById("closeFormBlock").onclick = function() {
         document.getElementById("formBlock").style.display = "none";
         openBlock = false;
         document.getElementById("btnOpenForm").disable = false;
+        document.getElementById("btnOpenFormSecond").disable = false;
         document.getElementById("shadowMain").style.boxShadow = "none";
+    }
+}
+btnOpenFormSecond.onclick = () => {
+    if (openBlock == false) {
+        document.getElementById("formBlock").style.display = "block";
+        openBlock = true;
+        document.getElementById("btnOpenFormSecond").disable = true;
+        document.getElementById("shadowMain").style.boxShadow = "0 0 0 9999px rgba(0,0,0, 0.6)";
     }
 }
 
@@ -213,7 +258,7 @@ function updateTime() {
 }
 function updateWindowSite(scrollingDirection) {
     if (scrollingDirection) {
-        console.log(scrollingDirection);
+        // console.log(scrollingDirection);
         if (numberWindow < 4) {
             numberWindow ++;
         }
@@ -235,7 +280,7 @@ function updateWindowSite(scrollingDirection) {
                 break;
         }
     } else {
-        console.log(scrollingDirection);
+        // console.log(scrollingDirection);
         if (numberWindow > 0) {
             numberWindow --;
         }
@@ -315,3 +360,20 @@ langIcon[2].onclick = () => {
     arrowLangVar = true;
     startSetupSite();
 }
+
+// open nav bar
+burgerButton.onclick = () => {
+    if (openBurger) {
+        navBarMobile.style.display = "flex";
+        openBurger = false;
+    } else {
+        navBarMobile.style.display = "none";
+        openBurger = true;
+    }
+}
+
+// 
+// mobileMainBlock.onscroll = () => {
+//     btnOpenFormSecond.style.display = "none";
+//     setTimeout(() => btnOpenFormSecond.style.display = "block", 2000);
+// }

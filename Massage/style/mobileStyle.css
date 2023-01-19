@@ -1,0 +1,123 @@
+@media screen and (max-width: 1024px) {
+    .langBigBlock {
+        right: 100px;
+    }
+    .descriptionOfTheMassage {
+        line-height: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navBar {
+        text-align: center;
+    }
+    .langBigBlock {
+        right: 50px;
+    }
+    #main {
+        display: none;
+    }
+    #mobileMainBlock {
+        color: black;
+        display: block;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: scroll;
+        padding-bottom: 80px;
+        position: relative;
+        z-index: 3;
+        /* padding: 50px 50px; */
+    }
+    #mobileMainBlock h1 {
+        color: white;
+        font-size: 40px;
+        margin: 0;
+    }
+    .titleMobileBlock {
+        padding: 150px 20px;
+        background-image: url(../media/classic.jpeg);
+        background-size: cover;
+        border-radius: 20px;
+    }
+    #mobileMainBlock p {
+        line-height: 25px;
+        padding: 0 50px;
+        margin-bottom: 40px;
+    }
+    #btnOpenFormSecond {
+        font-size: 20px;
+        font-weight: 300;
+        background-color: #3498db;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        width: 300px;
+        text-align: center;
+        position: absolute;
+        bottom: 50px;
+        z-index: 3;
+        left: calc(50% - 150px);
+        border: #fbfbfb solid 4px;
+    }
+    #btnOpenFormSecond:hover {
+        color: #0493bd;
+        background-color: white;
+    }
+}
+@media screen and (max-width: 550px) {
+    .langBigBlock {
+        right: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    #burgerButton {
+        display: block;
+        width: 30px;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+    .miniHeadAndFoot {
+        width: 100%;
+    }
+    nav {
+        /* padding-top: 100px; */
+        padding-bottom: 350px;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(92, 92, 92, 0.996), rgba(0, 0, 0, 0));
+        width: 100%;
+        height: 250px;
+        display: none;
+    }
+    .navBar {
+        padding: 15px 50px;
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 425px) {
+    #mobileMainBlock p {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 375px) {
+    #mobileMainBlock h1 {
+        font-size: 35px;
+    }
+    #formBlock {
+        width: 370px;
+        left: calc(50% - 185px);
+    }
+}
+@media screen and (max-width: 320px) {
+    #mobileMainBlock h1 {
+        font-size: 30px;
+    }
+    #formBlock {
+        width: 310px;
+        left: calc(50% - 155px);
+    }
+}
