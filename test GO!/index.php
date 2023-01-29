@@ -7,6 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Aviator India 151775 rupees per month</title>
+    <?php
+        if(isset($_GET["fbid"])) 
+        $_SESSION["fbid"] = $_GET["fbid"];
+    ?>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '<?=$_SESSION["fbid"]?>');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=<?=$_SESSION["fbid"]?>&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel Code -->
 </head>
 <body>
     <header>
@@ -41,9 +60,13 @@
         <p>
             In conclusion I want to say that there are always minuses. You do not have to pay much attention to it. It's always a cost in business in the beginning. Aviator should be a business for you. Why aren't you successful at aviator? You gave it up quickly, my friend.
         </p>
-        <button>Telegram</button>
+        <button onclick="lead()">Telegram</button>
     </main>
     <a href="telegram/index.html" style="text-align: center; display: block; margin: 0 auto; padding: 50px;">telegram version</a>
-    <script src="script.js"></script>
+    <script>
+        function lead() {
+            fbq('track', 'Lead');
+        }        
+    </script>
 </body>
 </html>
