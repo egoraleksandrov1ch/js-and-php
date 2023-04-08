@@ -8,8 +8,8 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <title>Aviator India 151775 rupees per month</title>
     <?php
-        if(isset($_GET["fbid"])) 
-        $_SESSION["fbid"] = $_GET["fbid"];
+        if(isset($_GET["s3"])) 
+        $_SESSION["s3"] = $_GET["s3"];
     ?>
     <script>
         !function(f,b,e,v,n,t,s)
@@ -20,11 +20,11 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '<?=$_SESSION["fbid"]?>');
+        fbq('init', '<?=$_SESSION["s3"]?>');
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=<?=$_SESSION["fbid"]?>&ev=PageView&noscript=1"/></noscript>
+        src="https://www.facebook.com/tr?id=<?=$_SESSION["s3"]?>&ev=PageView&noscript=1"/></noscript>
 <!-- End Facebook Pixel Code -->
 </head>
 <body>

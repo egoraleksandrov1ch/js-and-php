@@ -1,0 +1,3 @@
+let good () => () {
+ var good ==
+}
